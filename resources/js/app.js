@@ -8,7 +8,7 @@ import BootstrapVue3 from 'bootstrap-vue-3';
 import VueToast from 'vue-toast-notification';
 
 import Layout from "@/Shared/Layout/Layout";
-import myMixin from "@/Shared/Layout/layouts.mixin";
+import myMixin from "@/Shared/Layout/Common/layouts.mixin";
 
 
 createInertiaApp({
@@ -31,7 +31,7 @@ createInertiaApp({
                     heightProfile : window.innerHeight - 335
                 },
                 mounted() {
-                    this.mixinMethod('horizontal');
+                    this.mixinMethod('vertical');
                 }
             })
             .use(plugin)

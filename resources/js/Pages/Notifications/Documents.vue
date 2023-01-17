@@ -43,14 +43,13 @@
             </a>
         </div>
     </b-dropdown>
-    <View ref="view"/>
 </template>
 
 <script>
-    import View from '../Modules/Document/Modals/View.vue';
+    // import View from '../Modules/Document/Modals/View.vue';
     import { SimpleBar } from 'simplebar-vue3';
     export default {
-        components : { SimpleBar, View },
+        components : { SimpleBar },
         data(){
             return {
                 currentUrl: window.location.origin,
@@ -64,7 +63,7 @@
         },
 
         created(){
-            this.fetch();
+            // this.fetch();
         },
         
         methods : {

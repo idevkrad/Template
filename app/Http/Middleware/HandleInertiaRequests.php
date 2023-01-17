@@ -2,11 +2,6 @@
 
 namespace App\Http\Middleware;
 
-use App\Models\ListRole;
-use App\Models\ListGroup;
-// use App\Models\Leave;
-use App\Models\ListDropdown;
-use App\Models\ListPosition;
 use Illuminate\Http\Request;
 use Inertia\Middleware;
 use App\Http\Resources\UserResource;
@@ -48,12 +43,7 @@ class HandleInertiaRequests extends Middleware
                 'message' => session('message'),
                 'datares' => session('data'),
                 'type' => session('type')
-            ],
-            'positions' => ListPosition::all(),
-            'groups' => ListGroup::all(),
-            'roles' => ListRole::all(),
-            'dropdowns' => ListDropdown::all(),
-            // 'leave' => Leave::where('status_id',54)->count()
+            ]
         ]);
     }
 }

@@ -42,14 +42,14 @@
             </a>
         </div>
     </b-dropdown>
-    <View :role="$page.props.auth.data.role" ref="view"/>
+    <!-- <View :role="$page.props.auth.data.role" ref="view"/> -->
 </template>
 
 <script>
-    import View from '../Modules/Request/Modals/View.vue';
+    // import View from '../Modules/Request/Modals/View.vue';
     import { SimpleBar } from 'simplebar-vue3';
     export default {
-        components : { SimpleBar, View },
+        components : { SimpleBar },
         data(){
             return {
                 currentUrl: window.location.origin,
@@ -59,7 +59,7 @@
         },
         
         created(){
-            this.fetch();
+            // this.fetch();
             // this.listenForNewEvent();
             // this.roles = this.profile.roles.map(function(a) {return a.name;});
         },

@@ -23,15 +23,6 @@ class UserResource extends JsonResource
             'gender' => $this->profile->gender,
             'mobile' => $this->profile->mobile,
             'birthday' => $this->profile->birthday,
-            'position' => ($this->employee) ? $this->employee->position : '',
-            'department' => ($this->employee) ? $this->employee->department : '',
-            'status' => ($this->employee) ? $this->employee->status : '',
-            'office' => ($this->employee) ? $this->employee->office : '',
-            'religion' => ($this->employee) ? $this->employee->religion : '',
-            'bloodtype' => ($this->employee) ? $this->employee->bloodtype : '',
-            'level' => ($this->employee) ? $this->employee->level : '',
-            'groups' => GroupResource::collection($this->groups),
-            'roles' => RoleResource::collection($this->roles),
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at
         ];

@@ -13,47 +13,27 @@
             </div>
         </div>
         <div id="layout-wrapper">
-            <wew />
-            <HorizontalNavigation v-if="$page.props.auth.data.role == 'Regional Director'"/>
-            <div class="main-content" style="margin-top: -40px;" v-if="$page.props.auth.data.role != 'Regional Director'">
-                <div class="page-content" style="margin-bottom: -35px;">
-                    <div class="account-pages px-4">
-                        <Profile />
-                        <div class="row g-3">
-                            <Navigation />
-                            <div class="col-md-9">
-                                <slot />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="main-content" v-else>
+            <Header />
+            <Navigation />
+            <div class="main-content">
                 <div class="page-content">
                     <div class="container-fluid">
                         <slot />
                     </div>
                 </div>
             </div>
+            <RightBar />
         </div>
     </div>
 </template>
 
 <script>
-    import HorizontalNavigation from "@/Shared/Layout/Horizontal/HorizontalNavigation";
-    import Director from "@/Shared/Layout/Horizontal/Director.vue";
-    import Navigation from "@/Shared/Layout/Horizontal/Navigation.vue";
-    import Profile from "@/Shared/Layout/Horizontal/Profile.vue";
-    import wew from "@/Shared/Layout/Horizontal/NavBar.vue";
+    import Navigation from "./Navigation.vue";
+    import Header from "./Header.vue";
+    import RightBar from "../Common/RightBar.vue";
     export default {
         props: ['auth'],
-        components: {
-            wew,
-            Profile,
-            Navigation,
-            Director,
-            HorizontalNavigation
-        },
+        components: { Header, Navigation, RightBar },
         data() {
             return {
                 isMenuCondensed: false,

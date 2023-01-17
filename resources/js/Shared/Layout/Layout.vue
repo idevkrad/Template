@@ -29,8 +29,8 @@
 </template>
 
 <script>
-import Vertical from "@/Shared/Layout/Vertical/Index.vue";
-import Horizontal from "@/Shared/Layout/Horizontal/Index.vue";
+import Vertical from "@/Shared/Layout/Vertical-Layout/Index.vue";
+import Horizontal from "@/Shared/Layout/Horizontal-Layout/Index.vue";
 export default {
     components: { Vertical, Horizontal },
     computed: {

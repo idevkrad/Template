@@ -40,7 +40,7 @@
 </template>
 
 <script>
-import { menuItems} from "../menu";
+import { menuItems} from "./menu";
 
 export default {
     data() {

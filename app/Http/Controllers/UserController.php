@@ -37,7 +37,7 @@ class UserController extends Controller
         if($request->search){
             return $data;
         }else{
-            return inertia('Employees/Index');
+            return inertia('Modules/Users/Index');
         }
     }
 

@@ -14,8 +14,8 @@
             </div>
         </div>
         <div id="layout-wrapper">
-            <NavBar/>
-            <SideBar :is-condensed="isMenuCondensed" />
+            <Header/>
+            <Sidebar :is-condensed="isMenuCondensed" />
 
             <div class="main-content">
                 <div class="page-content" style="margin-bottom: -60px;">
@@ -31,12 +31,11 @@
 
 
 <script>
-import NavBar from "@/Shared/Layout/Vertical/Navbar.vue";
-import SideBar from "@/Shared/Layout/Vertical/Sidebar.vue";
-import RightBar from "@/Shared/Layout/Vertical/Rightbar.vue";
-
+import Header from "./Header.vue";
+import RightBar from "@/Shared/Layout/Common/RightBar.vue";
+import Sidebar from "@/Shared/Layout/Vertical-Layout/Sidebar.vue";
 export default {
-    components: { NavBar, SideBar, RightBar },
+    components: { Header, RightBar, Sidebar },
     data() {
         return {
             isMenuCondensed: false

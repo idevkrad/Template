@@ -37,18 +37,5 @@ class DatabaseSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now(),
         ]);
-
-        $this->call(ListDropdownsTableSeeder::class);
-        $this->call(ListGroupsTableSeeder::class);
-        $this->call(ListRolesTableSeeder::class);
-        $this->call(ListPositionsTableSeeder::class);
-        $this->call(ListVehiclesTableSeeder::class);
-        // $this->call(SurveysTableSeeder::class);
-        $this->call(UsersTableSeeder::class);
-        $this->call(UserEmployeesTableSeeder::class);
-        $this->call(UserInfosTableSeeder::class);
-        $this->call(UserProfilesTableSeeder::class);
-        $this->call(UserablesTableSeeder::class);
-        $this->call(DtrsTableSeeder::class);
     }
 }

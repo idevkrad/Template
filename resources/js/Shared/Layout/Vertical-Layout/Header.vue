@@ -1,6 +1,7 @@
 <script>
     import { SimpleBar } from 'simplebar-vue3';
-
+    import NotificationTravel from '../../../Pages/Notifications/Requests.vue';
+    import NotificationDocument from '../../../Pages/Notifications/Documents.vue';
     export default {
         data() {
             return {
@@ -22,7 +23,7 @@
                 currentUrl: window.location.origin,
             };
         },
-        components: { SimpleBar },
+        components: { SimpleBar, NotificationTravel, NotificationDocument },
         methods: {
             toggleMenu() {
                 this.$parent.toggleMenu();
@@ -130,102 +131,8 @@
                     </button>
                 </div>
 
-                <b-dropdown right menu-class="dropdown-menu-lg p-0 dropdown-menu-end"
-                    toggle-class="header-item noti-icon" variant="black">
-                    <template v-slot:button-content>
-                        <i class="bx bx-bell bx-tada"></i>
-                        <span class="badge bg-danger rounded-pill">test</span>
-                    </template>
-
-                    <div class="p-3">
-                        <div class="row align-items-center">
-                            <div class="col">
-                                <h6 class="m-0">tssest</h6>
-                            </div>
-                            <div class="col-auto">
-                                <a href="#" class="small">test2</a>
-                            </div>
-                        </div>
-                    </div>
-                    <SimpleBar style="max-height: 230px;">
-                        <a href="javascript: void(0);" class="text-reset notification-item">
-                            <div class="media">
-                                <div class="avatar-xs me-3">
-                                    <span class="avatar-title bg-primary rounded-circle font-size-16">
-                                        <i class="bx bx-cart"></i>
-                                    </span>
-                                </div>
-                                <div class="media-body">
-                                    <h6 class="mt-0 mb-1">wew</h6>
-                                    <div class="font-size-12 text-muted">
-                                        <p class="mb-1">wew1</p>
-                                        <p class="mb-0">
-                                            <i class="mdi mdi-clock-outline"></i>
-                                           wew2
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="javascript: void(0);" class="text-reset notification-item">
-                            <div class="media">
-                                <img src="/images/users/avatar-3.jpg" class="me-3 rounded-circle avatar-xs"
-                                    alt="user-pic" />
-                                <div class="media-body">
-                                    <h6 class="mt-0 mb-1">asdada</h6>
-                                    <div class="font-size-12 text-muted">
-                                        <p class="mb-1">asdada</p>
-                                        <p class="mb-0">
-                                            <i class="mdi mdi-clock-outline"></i>
-                                           asdada
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="javascript: void(0);" class="text-reset notification-item">
-                            <div class="media">
-                                <div class="avatar-xs me-3">
-                                    <span class="avatar-title bg-success rounded-circle font-size-16">
-                                        <i class="bx bx-badge-check"></i>
-                                    </span>
-                                </div>
-                                <div class="media-body">
-                                    <h6 class="mt-0 mb-1">asdada</h6>
-                                    <div class="font-size-12 text-muted">
-                                        <p class="mb-1">asdada</p>
-                                        <p class="mb-0">
-                                            <i class="mdi mdi-clock-outline"></i>
-                                            asdada
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="javascript: void(0);" class="text-reset notification-item">
-                            <div class="media">
-                                <img src="/images/users/avatar-4.jpg" class="me-3 rounded-circle avatar-xs"
-                                    alt="user-pic" />
-                                <div class="media-body">
-                                    <h6 class="mt-0 mb-1">asdada</h6>
-                                    <div class="font-size-12 text-muted">
-                                        <p class="mb-1">asdada</p>
-                                        <p class="mb-0">
-                                            <i class="mdi mdi-clock-outline"></i>
-                                           asda
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </SimpleBar>
-                    <div class="p-2 border-top d-grid">
-                        <a class="btn btn-sm btn-link font-size-14 text-center" href="javascript:void(0)">
-                            <i class="mdi mdi-arrow-down-circle me-1"></i>
-                            <span key="t-view-more"> haha </span>
-                        </a>
-                    </div>
-                </b-dropdown>
+                <NotificationDocument></NotificationDocument>
+                <NotificationTravel></NotificationTravel>
 
                 <b-dropdown right variant="black" toggle-class="header-item" menu-class="dropdown-menu-end">
                     <template v-slot:button-content>
