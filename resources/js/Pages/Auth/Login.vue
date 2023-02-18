@@ -7,19 +7,8 @@
                 <div class="p-2">
                     <form class="form-horizontal" @submit.prevent="submit"> 
 
-                        <div class="row mb-3">
-                            <div class="col-2">
-                                <img src="images/dost.png" alt="" class="avatar-sm">
-                            </div>
-                            <div class="col-10">
-                                <div class="text-primary mt-1">
-                                    <p>Department of Science & Technology <br>Region IX - Official Communication Portal</p>
-                                </div>
-                            </div>
-                        </div>
-
                         <div class="form-group mb-2">
-                            <label for="email" style="margin-bottom: -5px;">Email/Username</label>
+                            <label for="email" style="margin-bottom: -5px;">Email</label>
                             <input placeholder="Enter email/username" class="form-control" type="text" v-model="form.email" required autofocus>
                   
                             <span class="invalid-feedback" role="alert">
@@ -53,7 +42,7 @@
                 </div>
             </div>
         </div>
-        <p class="text-center">© DOST PORTAL <i class='bx bxs-heart text-danger'></i> 2021</p>
+        <p class="text-center">© TRAFFIGAZE <i class='bx bxs-heart text-danger'></i> 2023</p>
     </div>
 </div>
 </template>
@@ -71,8 +60,8 @@ defineProps({
 });
 
 const form = useForm({
-    email: '',
-    password: 'dost9ict',
+    email: 'admin@krad.com',
+    password: '123456789',
     remember: false
 });
 

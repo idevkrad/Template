@@ -1,9 +1,7 @@
 <script>
     import { SimpleBar } from 'simplebar-vue3';
-    import NotificationTravel from '../../../Pages/Notifications/Requests.vue';
-    import NotificationDocument from '../../../Pages/Notifications/Documents.vue';
     export default {
-        components: { SimpleBar, NotificationTravel, NotificationDocument },
+        components: { SimpleBar },
         data() {
             return {
                 currentUrl: window.location.origin,
@@ -122,8 +120,6 @@
                         <i class="bx bx-fullscreen"></i>
                     </button>
                 </div>
-                <NotificationDocument></NotificationDocument>
-                <NotificationTravel></NotificationTravel>
 
                 <!-- <b-dropdown right menu-class="dropdown-menu-lg p-0 dropdown-menu-end"
                     toggle-class="header-item noti-icon" variant="black">
